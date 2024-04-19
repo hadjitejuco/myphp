@@ -2,7 +2,35 @@
 
 https://github.com/hadjitejuco/myphp/tree/master
 
-
+emmet
 https://github.com/emmetio/netbeans/releases/tag/v1.4.0
 
 
+What do we need
+
+1. OS
+    Windows
+    MAC OS
+    Ubuntu
+
+2.  XAMPP - https://www.apachefriends.org/
+    WAMP
+
+    xampp folder
+    c: drive
+
+
+
+3.  Editor
+    Notepad++
+    Sublime
+    Netbeans 12
+    VSCODE
+    
+c:\xampp\htdocs\
+
+    create folder
+
+    hjt
+
+    c:\xampp\htdocs\hjt
