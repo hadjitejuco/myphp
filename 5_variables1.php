@@ -10,7 +10,7 @@
 		// variables are used to store values
 		// use "=" to assign a value
 		$company = 'XYZ Consulting';
-
+                echo 'Company name: '. $company . '<br>';
 		// always start variable names with a "$" followed by a letter or underscore
 		$name 	  = 'VALUE';
 		$_another = 23;
