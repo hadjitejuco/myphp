@@ -15,7 +15,6 @@
             $today = date('Y-m-d');
             //display the date
             echo "<p><b>Today is $today </b></p>";
-            
         ?>
     </body>
 </html>
