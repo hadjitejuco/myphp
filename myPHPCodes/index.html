@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Result</title>
+</head>
+<body>
+    <h1>Registration Results</h1>
+    
+    <form id="registrationForm">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="is_student">Are you a student?</label>
+        <input type="checkbox" id="is_student" name="is_student"><br><br>
+        
+        <button type="button" onclick="calculateRegistrationFee()">Calculate Registration Fee</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function calculateRegistrationFee() {
+            var age = parseInt(document.getElementById('age').value);
+            var isStudent = document.getElementById('is_student').checked;
+            
+            // Send form data to PHP script using AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'calculate_fee.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('result').innerHTML = xhr.responseText;
+                    } else {
+                        console.error('Error:', xhr.status);
+                    }
+                }
+            };
+            
+            // Prepare data to send
+            var formData = 'age=' + age + '&is_student=' + isStudent;
+            
+            // Send data
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>
