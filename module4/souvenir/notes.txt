@@ -1,0 +1,25 @@
+souvenir shop
+
+Structure of the program
+
+1.  index.php -> main entry point, display the menu and the navigation
+
+2.  config.php -> contains the configurations
+
+3.  header.php -> contains the header and footer.php
+
+4.  product.php -> functions to display the products
+		showMugs()
+		Mugs
+		Explore our collection of beautiful mugs
+
+		showTShirts()
+		T-Shirts
+		Chek out our unique t-shirt collection
+
+		showKeychains()
+		Keychains
+		Find a variety of keychains you can choose from
+
+5.  utils.php -> function in the application
+
