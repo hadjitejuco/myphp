@@ -1,0 +1,19 @@
+CREATE DATABASE crud_db;
+USE crud_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    city VARCHAR(100)
+);
+
+
+USE crud_db;
+
+ALTER TABLE users
+ADD COLUMN last_name VARCHAR(100) AFTER id,
+ADD COLUMN first_name VARCHAR(100) AFTER last_name,
+ADD COLUMN middle_initial VARCHAR(1) AFTER first_name,
+ADD COLUMN birthday DATE AFTER age,
+DROP COLUMN name;
