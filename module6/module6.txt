@@ -1,0 +1,193 @@
+Database Creation
+
+	To create a new database in MySQL, use the CREATE DATABASE statement.
+		CREATE DATABASE company_db;
+
+To use the newly created database, use the USE statement:
+	USE company_db;
+
+
+Table Creation
+	To create a table, use the CREATE TABLE statement. Let's create a table for employees.
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    job_title VARCHAR(50),
+    salary DECIMAL(10, 2),
+    PRIMARY KEY (id)
+);
+
+Adding a Primary Key
+	In the table creation step above, we have already added a primary key to the id column using the PRIMARY KEY constraint.
+
+
+Modifying the Table Structure
+	To modify the structure of an existing table, use the ALTER TABLE statement. Let's add a new column for the hire date.
+
+	ALTER TABLE employees
+	ADD hire_date DATE;
+
+Inserting Values into Your Table
+	To insert values into the table, use the INSERT INTO statement.
+
+	INSERT INTO employees (first_name, last_name, email, job_title, salary, hire_date)
+	VALUES ('John', 'Doe', 'john.doe@example.com', 'Software Engineer', 60000.00, '2023-01-15');
+
+Inserting Values in a Specific Column
+
+	If you want to insert values into specific columns, you can omit the columns not being inserted.
+
+		INSERT INTO employees (first_name, last_name, email)
+		VALUES ('Jane', 'Smith', 'jane.smith@example.com');
+
+Updating Records
+
+	To update existing records, use the UPDATE statement. Let's update John's salary.
+
+		UPDATE employees
+		SET salary = 65000.00
+		WHERE first_name = 'John' AND last_name = 'Doe';
+
+Updating Multiple Columns
+
+	To update multiple columns at once, list all columns to be updated.
+
+		UPDATE employees
+
+		SET job_title = 'Senior Software Engineer', salary = 70000.00
+		WHERE first_name = 'John' AND last_name = 'Doe';
+
+Using Select Statements
+
+	To retrieve data from the table, use the SELECT statement.
+		SELECT * FROM employees;
+
+		SELECT first_name, last_name, email FROM employees WHERE job_title = 'Software Engineer';
+
+Deleting Columns
+
+	To delete a column from a table, use the ALTER TABLE statement with the DROP COLUMN clause.
+
+		ALTER TABLE employees
+		DROP COLUMN hire_date;
+
+Deleting All Data in a Table
+
+	To delete all data in a table without removing the table itself, use the TRUNCATE TABLE statement.
+		TRUNCATE TABLE employees;
+
+Deleting a Table
+
+	To delete a table, use the DROP TABLE stateme
+		DROP TABLE employees;
+
+
+Deleting a Database
+
+	To delete an entire database, use the DROP DATABASE statement.
+		DROP DATABASE company_db;
+
+
+-----------------------------------------
+
+Creating and Managing a Company Database
+
+Create the Database
+
+	Name: company_db
+
+Create the Table
+
+	Name: employees
+	Columns:
+		id (Primary Key, Auto Increment)
+		first_name (VARCHAR(50))
+		last_name (VARCHAR(50))
+		email (VARCHAR(100))
+		job_title (VARCHAR(50))
+		salary (DECIMAL(10, 2))
+		hire_date (DATE)
+
+Insert the Following Records
+		
+id	first_name	last_name	email					job_title			salary		hire_date
+1	John		Doe			john.doe@example.com	Software Engineer	60000.00	2023-01-15
+2	Jane		Smith		jane.smith@example.com	Project Manager		75000.00	2022-03-22
+3	Alice		Johnson		alice.j@example.com		Data Analyst		65000.00	2021-06-30
+4	Bob			Brown		bob.brown@example.com	HR Specialist		55000.00	2020-11-20
+5	Charlie		Davis		charlie.d@example.com	Marketing Manager	70000.00	2022-08-10
+6	Emily		Wilson		emily.w@example.com		Sales Executive		72000.00	2021-04-05
+7	Frank		Thomas		frank.t@example.com		Software Engineer	64000.00	2023-02-14
+8	Grace		Lee			grace.l@example.com		UI/UX Designer		67000.00	2022-05-16
+9	Henry		Walker		henry.w@example.com		Product Manager		76000.00	2020-09-29
+10	Irene		King		irene.k@example.com		Business Analyst	69000.00	2021-12-01
+
+Update Records
+
+	Update Frank Thomas's salary to 68000.00.
+	Change Jane Smith’s job title to Senior Project Manager and her salary to 80000.00.
+
+Use Select Statements
+
+	Select all columns for all employees.
+	Select first_name, last_name, and email of employees whose job title is Software Engineer.
+
+Delete a Column
+
+	Delete the hire_date column from the employees table.
+
+Delete All Data in a Table
+
+	Clear all records from the employees table.
+
+Delete the Table
+
+	Remove the employees table from the database.
+
+Delete the Database
+
+	Delete the company_db database.
+
+Select All Columns from All Employees
+
+Select Specific Columns (first_name, last_name, email) from All Employees
+
+Select Employees with Job Title 'Software Engineer'
+
+Select Employees with Salary Greater Than 70000
+
+Select Employees Hired After January 1, 2022
+
+Select Employees with Last Name 'Smith'
+
+Select Employees and Order by Salary in Descending Order
+
+Select Employees with Job Title Containing 'Manager'
+
+Select Distinct Job Titles
+
+Select Total Number of Employees
+
+Select Average Salary of Employees
+
+Select Sum of Salaries for 'Software Engineer' Job Title
+
+Select Employees Grouped by Job Title and Count
+
+Select Employees with a Specific Salary Range (50000 to 70000)
+
+Select Employees with Emails Containing 'example.com'
+
+Select Employees with Null Hire Date
+
+Select Top 5 Highest Paid Employees
+
+Select Employees by Job Title and Salary Greater Than 65000
+
+Select Employees and Display Full Name as a Single Column
+
+Select Employees Hired in the Year 2023
+
