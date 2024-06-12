@@ -1,0 +1,23 @@
+CREATE DATABASE clientdb;
+
+USE clientdb;
+
+CREATE TABLE clients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+USE clientdb;
+
+ALTER TABLE clients
+ADD COLUMN first_name VARCHAR(255) NOT NULL,
+ADD COLUMN last_name VARCHAR(255) NOT NULL,
+ADD COLUMN middle_initials VARCHAR(5),
+ADD COLUMN gender ENUM('Male', 'Female') NOT NULL,
+MODIFY COLUMN phone VARCHAR(15) NOT NULL,
+DROP COLUMN name;
